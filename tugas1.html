@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="tugas1.css" />
   </head>
   <body>
-    <h1>Tugas Sistem Operasi</h1>
+    <h1>SISTEM OPERASI</h1>
+    <h1>Tugas 1</h1>
 
     <div class="gambar-container">
       <h2 class="judul-gambar">1. Scan</h2>
       <div class="konten-gambar">
-        <img src="Scan.png" alt="Scan" />
+        <img src="SCAN.jpg" alt="Scan" />
         <p class="deskripsi">
-          Dari 1234 menuju lintasan track terbesar yaitu 2000, setelanjutnya
-          menuju lintasan track terkecil 1. perhitungan menjadi 1234 ke 1999,
-          lalu 1999 ke 0
+          Head berjalan ke arah bawah sampai track 0, lalu kembali ke atas. 
+          Gerakan teratur dan adil, dan hanya perlu 2.746 track — seefisien 
+          SSTF dalam kasus ini.
         </p>
       </div>
     </div>
 
     <div class="gambar-container">
-      <h2 class="judul-gambar">2. C Scan</h2>
+      <h2 class="judul-gambar">2. C-Scan</h2>
       <div class="konten-gambar">
-        <img src="C Scan1.png" alt="C Scan" />
+        <img src="C-SCAN.jpg" alt="C-Scan" />
         <p class="deskripsi">
-          Dari 1234 menuju ke lintasan track terbesar 2000. Selanjutnya menuju
-          ke lintasan track terkecil 1, tidak diakses tetapi dihitung.
-          Selanjutnya menuju ke 1050. Pehitungan 1234 ke 2000, 2000 ke 0, 0 ke
-          1050.
+          Head bergerak satu arah (misalnya ke kanan), 
+          lalu langsung kembali ke awal. 
+          Total lintasan sedikit lebih besar (3.826 track) dikarenakan ada “loncatan” ke awal disk.
         </p>
       </div>
     </div>
@@ -37,23 +37,22 @@
     <div class="gambar-container">
       <h2 class="judul-gambar">3. LOOK</h2>
       <div class="konten-gambar">
-        <img src="Look.png" alt="LOOK" />
+        <img src="LOOK.jpg" alt="LOOK" />
         <p class="deskripsi">
-          Dari 1234 menuju ke antrian track terbesar, yaitu 1999. Selanjutnya
-          menuju ke antrian terkecil 30. Pehitungan 1234-1999, 1999-30.
+          Sama seperti pada SCAN yaitu 2.746, namun pada LOOK hanya ke permintaan paling ujung (tidak sampai track 0). 
+          Hasil identik dengan SCAN karena data kita tidak sampai track 0 atau 1999.
         </p>
       </div>
     </div>
 
     <div class="gambar-container">
-      <h2 class="judul-gambar">4. C LOOK</h2>
+      <h2 class="judul-gambar">4. C-LOOK</h2>
       <div class="konten-gambar">
-        <img src="C Look.png" alt="C LOOK" />
+        <img src="C-LOOK.jpg" alt="C-LOOK" />
         <p class="deskripsi">
-          Dari 1234 menuju ke antrian track terbesar, yaitu 1999. Kemudian
-          menuju ke antrian terkecil 30, tidak diakses tetapi dihitung.
-          Selanjutnya menuju ke 1050, sisa lintasan yang belum diakses.
-          Pehitungan 1234-1999, 1999-30, 30-1050.
+          C-LOOK ini lintasannya sedikit lebih panjang yaitu 3.766. 
+          karena metode ini memutar head dari ujung kembali ke awal (circular),
+          jadi ada tambahan jarak setiap kali harus "loncat" dari ujung ke awal.
         </p>
       </div>
     </div>
@@ -61,34 +60,32 @@
     <div class="gambar-container">
       <h2 class="judul-gambar">5. PTPD</h2>
       <div class="konten-gambar">
-        <img src="PTPD.png" alt="PTPD" />
+        <img src="PTPD.jpg" alt="PTPD" />
         <p class="deskripsi">
-          Dari 1234 menuju ke lintasan 1600, kemudian ke 1050, ke 1775, dan
-          seterusnya. Setiap lintasan yang dilalui dihitung.
+          Head selalu bergerak ke permintaan terdekat. 
+          Ini sangat efisien dan meminimalkan lintasan, total hanya 2.746 track. 
+          Namun, berpotensi menunda permintaan yang jauh (starvation).
         </p>
       </div>
     </div>
 
     <div class="gambar-container">
-      <h2 class="judul-gambar">6. SSTF</h2>
+      <h2 class="judul-gambar">6. FCFS</h2>
       <div class="konten-gambar">
-        <img src="SSTF1.png" alt="SSTF" />
+        <img src="FCFS.jpg" alt="FCFS" />
         <p class="deskripsi">
-          Berfokus pada efisiensi dengan memilih permintaan akses track yang
-          memiliki jarak terpendek dari posisi head saat ini. Hulu baca tulis
-          mulai dari 1234, kemudian menuju ke lintasan terdekat 1300,
-          selanjutnya ke 1450, lalu 1600 dan seterusnya.
+          Head mengikuti urutan permintaan sesuai datangnya. 
+          Ini menyebabkan banyak lintasan bolak-balik yang tidak efisien. 
+          Gerakan sangat besar (18.696 track) karena tidak mempertimbangkan jarak antar permintaan.
         </p>
       </div>
-    </div>
-
-    <div class="gambar-container">
-      <h2 class="judul-gambar">Grafik</h2>
+    </div><div class="gambar-container">
+      <h2 class="judul-gambar">7. Elevator</h2>
       <div class="konten-gambar">
-        <img src="Figure_2.png" alt="Grafik Visualisasi" />
+        <img src="Elevator.jpg" alt="Elevator" />
         <p class="deskripsi">
-          Visualisasi grafik dari hasil perhitungan algoritma penjadwalan disk.
-        </p>
+          Sama seperti SCAN, head naik dan turun sambil memproses permintaan. 
+          Sangat stabil dan efisien (2.746 track).
       </div>
     </div>
   </body>
