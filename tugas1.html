@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Sistem Operasi-1</title>
+    <link rel="stylesheet" href="tugas1.css" />
+  </head>
+  <body>
+    <h1>Tugas Sistem Operasi</h1>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">1. Scan</h2>
+      <div class="konten-gambar">
+        <img src="Scan.png" alt="Scan" />
+        <p class="deskripsi">
+          Dari 1234 menuju lintasan track terbesar yaitu 2000, setelanjutnya
+          menuju lintasan track terkecil 1. perhitungan menjadi 1234 ke 1999,
+          lalu 1999 ke 0
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">2. C Scan</h2>
+      <div class="konten-gambar">
+        <img src="C Scan1.png" alt="C Scan" />
+        <p class="deskripsi">
+          Dari 1234 menuju ke lintasan track terbesar 2000. Selanjutnya menuju
+          ke lintasan track terkecil 1, tidak diakses tetapi dihitung.
+          Selanjutnya menuju ke 1050. Pehitungan 1234 ke 2000, 2000 ke 0, 0 ke
+          1050.
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">3. LOOK</h2>
+      <div class="konten-gambar">
+        <img src="Look.png" alt="LOOK" />
+        <p class="deskripsi">
+          Dari 1234 menuju ke antrian track terbesar, yaitu 1999. Selanjutnya
+          menuju ke antrian terkecil 30. Pehitungan 1234-1999, 1999-30.
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">4. C LOOK</h2>
+      <div class="konten-gambar">
+        <img src="C Look.png" alt="C LOOK" />
+        <p class="deskripsi">
+          Dari 1234 menuju ke antrian track terbesar, yaitu 1999. Kemudian
+          menuju ke antrian terkecil 30, tidak diakses tetapi dihitung.
+          Selanjutnya menuju ke 1050, sisa lintasan yang belum diakses.
+          Pehitungan 1234-1999, 1999-30, 30-1050.
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">5. PTPD</h2>
+      <div class="konten-gambar">
+        <img src="PTPD.png" alt="PTPD" />
+        <p class="deskripsi">
+          Dari 1234 menuju ke lintasan 1600, kemudian ke 1050, ke 1775, dan
+          seterusnya. Setiap lintasan yang dilalui dihitung.
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">6. SSTF</h2>
+      <div class="konten-gambar">
+        <img src="SSTF1.png" alt="SSTF" />
+        <p class="deskripsi">
+          Berfokus pada efisiensi dengan memilih permintaan akses track yang
+          memiliki jarak terpendek dari posisi head saat ini. Hulu baca tulis
+          mulai dari 1234, kemudian menuju ke lintasan terdekat 1300,
+          selanjutnya ke 1450, lalu 1600 dan seterusnya.
+        </p>
+      </div>
+    </div>
+
+    <div class="gambar-container">
+      <h2 class="judul-gambar">Grafik</h2>
+      <div class="konten-gambar">
+        <img src="Figure_2.png" alt="Grafik Visualisasi" />
+        <p class="deskripsi">
+          Visualisasi grafik dari hasil perhitungan algoritma penjadwalan disk.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
