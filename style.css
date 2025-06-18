@@ -185,7 +185,7 @@ section {
   transition: 0.3s linear;
 }
 
-.typewriter span::before {
+.typewriter span::after {
   content: "Informatic Engineering Class F-23";
   animation: words 15s infinite;
 }
